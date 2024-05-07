@@ -1,7 +1,5 @@
 package com.example.urbandrive
 
-import LoginActivity
-import RegisterActivity
 import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
@@ -27,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar) // Define a toolbar como a action bar
         val titleIntroElement = findViewById<TextView>(R.id.title_intro)
+
 
         titleIntroElement.text = "Reiventamos o aluguel de carros "
 
