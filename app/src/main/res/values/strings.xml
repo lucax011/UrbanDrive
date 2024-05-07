@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Urban Drive</string>
+    <string name="app_login">Login</string>
+    <string name="app_register">Register</string>
+    <string name="app_Request">Solicite um carro!</string>
+    <string name="button_More">Saiba mais</string>
+</resources>

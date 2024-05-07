@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Background Image -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+        android:orientation="vertical"
+        android:layout_margin="16dp"
+        android:layout_centerVertical="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:background="@color/pink_trans"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:layout_margin="10dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:background="@color/pink_trans"
+            android:textColor="@android:color/black"
+            android:padding="15dp"
+            android:layout_margin="10dp" />
+
+        <!-- Botão azul -->
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrar"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/blue_trans"
+            android:padding="15dp" />
+
+
+
+    </LinearLayout>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        android:src="@drawable/background_image"
+        android:layout_alignParentBottom="true"/>
+    <!-- Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:logo="@drawable/logo"
+        app:title="Drive Urban"
+        app:titleTextColor="@color/pink"
+        android:layout_padding="10dp"/>
+
+</RelativeLayout>
