@@ -1,5 +1,6 @@
 package com.example.urbandrive
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Spannable
@@ -24,6 +25,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.toolbar) // Define a toolbar como a action bar
         val titleIntroElement = findViewById<TextView>(R.id.title_intro)
+
 
         titleIntroElement.text = "Reiventamos o aluguel de carros "
 
@@ -99,20 +101,23 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when(item.itemId){
+        when (item.itemId) {
             R.id.request -> {
-                // Implemente aqui a lógica para redirecionar para a tela de request
-                Toast.makeText(this, "Redirecionando para a tela de request", Toast.LENGTH_SHORT).show()
+                // Redireciona para a tela de solicitação
+                // Este trecho de código ainda precisa ser implementado
+                Toast.makeText(this, "Feature em desenvolvimento", Toast.LENGTH_SHORT).show()
                 return true
             }
             R.id.login -> {
-                // Implemente aqui a lógica para redirecionar para a tela de login
-                Toast.makeText(this, "Redirecionando para a tela de login", Toast.LENGTH_SHORT).show()
+                // Redireciona para a tela de login
+                val loginIntent = Intent(this, LoginActivity::class.java)
+                startActivity(loginIntent)
                 return true
             }
             R.id.register -> {
-                // Implemente aqui a lógica para redirecionar para a tela de register
-                Toast.makeText(this, "Redirecionando para a tela de register", Toast.LENGTH_SHORT).show()
+                // Redireciona para a tela de registro
+                val registerIntent = Intent(this, RegisterActivity::class.java)
+                startActivity(registerIntent)
                 return true
             }
             else -> return super.onOptionsItemSelected(item)

@@ -20,8 +20,7 @@
         android:background="?attr/colorPrimary"
         app:logo="@drawable/logo"
         app:title="Drive Urban"
-        app:titleTextColor="@color/pink"
-        android:layout_padding="10dp"/>
+        app:titleTextColor="@color/pink" />
 
     <ImageView
         android:id="@+id/imageView"

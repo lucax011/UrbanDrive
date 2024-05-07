@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".RegisterActivity">
 
     <!-- Background Image -->
 
@@ -70,7 +72,6 @@
         android:background="?attr/colorPrimary"
         app:logo="@drawable/logo"
         app:title="Drive Urban"
-        app:titleTextColor="@color/pink"
-        android:layout_padding="10dp"/>
+        app:titleTextColor="@color/pink" />
 
 </RelativeLayout>
