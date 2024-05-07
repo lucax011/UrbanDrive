@@ -21,7 +21,7 @@ public class RegisterActivity extends Activity {
         //  binding.textViewUsername.setText("Nome de usuário");
     }
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.nav_menu, menu);
+        getMenuInflater().inflate(R.menu.register_menu, menu);
         return true;
     }
 

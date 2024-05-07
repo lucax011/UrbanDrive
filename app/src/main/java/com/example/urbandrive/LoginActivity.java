@@ -23,7 +23,7 @@ public class LoginActivity extends Activity {
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.nav_menu, menu);
+        getMenuInflater().inflate(R.menu.login_menu, menu);
         return true;
     }
 
