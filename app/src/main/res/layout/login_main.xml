@@ -10,39 +10,64 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="229dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_margin="16dp"
-        android:layout_centerVertical="true">
+        android:layout_centerVertical="true"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_email"
+            android:textColor="@android:color/black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:background="@color/pink_trans"
             android:textColor="@android:color/black"
             android:padding="15dp"
-            android:layout_margin="10dp"
-            />
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_edittext_background" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/app_password"
+            android:textColor="@android:color/black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="2dp"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Senha"
-            android:background="@color/pink_trans"
             android:textColor="@android:color/black"
             android:padding="15dp"
-            android:layout_margin="10dp" />
-
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/rounded_edittext_background" />
         <!-- Botão azul -->
         <Button
-            android:layout_width="match_parent"
+            android:id="@+id/login_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Entrar"
+            android:text="@string/app_confirm"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/blue_trans"
-            android:padding="15dp" />
-
+            android:layout_margin="15dp"
+            android:drawableEnd="@drawable/round_arrow_forward_24"
+            />
 
 
     </LinearLayout>

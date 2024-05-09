@@ -11,7 +11,7 @@ Instalação
 Para clonar este repositório e executar o aplicativo, siga estas etapas:
 
 
-git clone https://github.com/seu_usuario/nome_do_repositorio.git
+git clone https://github.com/lucax011/UrbanDrive
 Abra o projeto no Android Studio e execute-o no dispositivo ou emulador.
 
 Screenshots
