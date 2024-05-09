@@ -4,7 +4,7 @@
 
     <item
         android:id="@+id/request"
-        android:title="@string/app_Request"
+        android:title="@string/app_request"
         app:showAsAction="never" />
 
 </menu>
