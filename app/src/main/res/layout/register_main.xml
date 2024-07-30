@@ -52,6 +52,7 @@
        <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/edtName"
             android:textColor="@android:color/black"
             android:maxLines="1"
             android:padding="15dp"
@@ -73,6 +74,7 @@
         <EditText
             android:layout_width="match_parent"
             android:maxLines="1"
+            android:id="@+id/edtEmail"
             android:layout_height="wrap_content"
             android:textColor="@android:color/black"
             android:padding="15dp"
@@ -94,6 +96,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/edtSenha"
             android:maxLines="1"
             android:inputType="textPassword"
             android:textColor="@android:color/black"
