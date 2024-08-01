@@ -1,4 +1,4 @@
-package com.example.urbandrive
+package com.example.urbandrive.data
 
 import com.example.urbandrive.data.LoginRequest
 import com.example.urbandrive.data.User
@@ -19,7 +19,7 @@ interface ApiService {
 }
 
 object RetrofitClient {
-    private const val BASE_URL = "http://192.168.15.55:3000/"
+    private const val BASE_URL = "http://localhost:3000/"
 
     val apiService: ApiService by lazy {
         Retrofit.Builder()

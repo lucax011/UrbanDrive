@@ -1,4 +1,4 @@
-package com.example.urbandrive.ui.viewmodel
+package com.example.urbandrive.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.urbandrive.data.User
 import com.example.urbandrive.data.LoginRequest
-import com.example.urbandrive.RetrofitClient
+import com.example.urbandrive.data.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
