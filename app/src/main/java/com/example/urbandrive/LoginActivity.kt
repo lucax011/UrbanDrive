@@ -4,12 +4,17 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.urbandrive.data.LoginRequest
 import com.example.urbandrive.databinding.LoginMainBinding
+import com.example.urbandrive.ui.UserViewModel
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: LoginMainBinding
+    private val userViewModel: UserViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +24,33 @@ class LoginActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // binding.textViewUsername.text = "Nome de usuário"
+        // Configurando o botão de login
+        binding.loginButton.setOnClickListener {
+            val email = binding.edtEmail.text.toString()
+            val password = binding.edtSenha.text.toString()
+
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                val loginRequest = LoginRequest(email = email, password = password)
+                userViewModel.loginUser(loginRequest)
+            } else {
+                Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        // Observando LiveData do ViewModel
+        userViewModel.userLiveData.observe(this, { user ->
+            // Navegar para a próxima atividade após o login bem-sucedido
+            if (user != null) {
+                val mainIntent = Intent(this, MainActivity::class.java)
+                startActivity(mainIntent)
+                finish() // Opcional: para remover a LoginActivity da pilha de atividades
+            }
+        })
+
+        userViewModel.errorLiveData.observe(this, { errorMessage ->
+            // Mostrar mensagem de erro
+            Toast.makeText(this, errorMessage, Toast.LENGTH_SHORT).show()
+        })
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
