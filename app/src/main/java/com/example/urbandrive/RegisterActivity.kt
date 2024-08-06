@@ -29,8 +29,6 @@ class RegisterActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val name = binding.edtName.text.toString()
             val email = binding.edtEmail.text.toString()
-
-
             val password = binding.edtSenha.text.toString()
 
             if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {

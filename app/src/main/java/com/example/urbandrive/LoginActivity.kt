@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.urbandrive.data.Argon2Util
@@ -15,7 +14,7 @@ import com.example.urbandrive.ui.UserViewModel
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: LoginMainBinding
-    private val userViewModel: UserViewModel by viewModels()
+    private lateinit var userViewModel: UserViewModel // Certifique-se de que o ViewModel esteja inicializado corretamente
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,7 +30,6 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.edtSenha.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
-
                 val loginRequest = LoginRequest(email = email, password = password)
                 userViewModel.loginUser(loginRequest)
             } else {
