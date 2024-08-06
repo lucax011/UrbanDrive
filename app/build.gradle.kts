@@ -63,4 +63,8 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     // Coroutines support without the adapter
     implementation("com.squareup.retrofit2:adapter-rxjava3:2.9.0")
+
+    implementation("de.mkammerer:argon2-jvm:2.11")
+
+
 }

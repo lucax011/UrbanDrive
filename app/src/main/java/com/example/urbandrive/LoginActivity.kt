@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.urbandrive.data.Argon2Util
 import com.example.urbandrive.data.LoginRequest
 import com.example.urbandrive.databinding.LoginMainBinding
 import com.example.urbandrive.ui.UserViewModel
@@ -30,6 +31,7 @@ class LoginActivity : AppCompatActivity() {
             val password = binding.edtSenha.text.toString()
 
             if (email.isNotEmpty() && password.isNotEmpty()) {
+
                 val loginRequest = LoginRequest(email = email, password = password)
                 userViewModel.loginUser(loginRequest)
             } else {

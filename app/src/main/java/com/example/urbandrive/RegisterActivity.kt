@@ -8,6 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
+import com.example.urbandrive.data.Argon2Util
 import com.example.urbandrive.data.User
 import com.example.urbandrive.databinding.RegisterMainBinding
 import com.example.urbandrive.ui.UserViewModel
@@ -28,12 +29,14 @@ class RegisterActivity : AppCompatActivity() {
         binding.loginButton.setOnClickListener {
             val name = binding.edtName.text.toString()
             val email = binding.edtEmail.text.toString()
-            
-            // Realizar criptografia
+
+
             val password = binding.edtSenha.text.toString()
 
             if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                val user = User(id = 0, name = name, email = email, password = password)
+                // Criptografia com Argon2
+                val hashedPassword = Argon2Util.hashPassword(password)
+                val user = User(id = 0, name = name, email = email, password = hashedPassword)
                 userViewModel.registerUser(user)
             } else {
                 Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
