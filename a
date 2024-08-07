@@ -1,0 +1,115 @@
+[33mcommit c354c069525603a0a381c59b81616bf424acaa7d[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Mon Aug 5 18:36:47 2024 -0300
+
+    Realizando o logging e registro de usuários com retrofit
+
+[33mcommit 682c26d4dbf7d9320598a30ad5abd5d01dc99a48[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu Aug 1 14:47:44 2024 -0300
+
+    Realizando alterações nas chamadas http, estamos com problema de CLEARTEXT mysql.queryerror
+
+[33mcommit f4f9401832da3da6fe948828b32def4c4cb181a5[m[33m ([m[1;31morigin/develop[m[33m, [m[1;32mdevelop[m[33m)[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Mon Jul 29 22:24:31 2024 -0300
+
+    resolvendo alterações no gradle
+
+[33mcommit 09b205111fd2f5ed6eeac1f5e9f44bb21f8be537[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Mon Jul 29 22:21:51 2024 -0300
+
+    Criamos a api com node.js, fizemos algumas integrações com o back-end, adicionamos retrofit para realizar chamadas http
+
+[33mcommit 6b494f29c32b604f00671ed6d709e9cbe4e1c8ee[m
+Merge: 787feb6 02e2240
+Author: Lucas <csdg6924@gmail.com>
+Date:   Mon Jul 29 17:51:53 2024 -0300
+
+    Merge branch 'master' of https://github.com/lucax011/UrbanDrive
+    ajustando conflitos de branch
+
+[33mcommit 787feb6d2a9c442dc5491317be04d3b476a67834[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Mon Jul 29 17:45:08 2024 -0300
+
+    Alterando as atividades de java -> Kotlin
+
+[33mcommit b61189786f649918ec7a5e8df836154013024dd4[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Fri May 10 00:02:30 2024 -0300
+
+    Interface - atualizando telas de login e cadastro
+
+[33mcommit 02e22403d7911a34041ab6f23eaaff3cfedf9024[m
+Merge: 3ebee97 97254fa
+Author: lucas <101607932+lucax011@users.noreply.github.com>
+Date:   Thu May 9 16:35:52 2024 -0300
+
+    Merge pull request #2 from lucax011/develop
+    
+    Develop
+
+[33mcommit 97254fa778546395aba8f8e8b869ef794a6ad988[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu May 9 16:34:07 2024 -0300
+
+    Atualizando referencia em strings
+
+[33mcommit 1cbbdd82e9b39c1f5f583a24bcc53c87373bf6ae[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Thu May 9 14:59:24 2024 -0300
+
+    Interface- Atualizando cor de backgroud
+
+[33mcommit 3ebee9784596d768d7de93840bf6c3a0e586e1bc[m
+Author: lucas <csdg6924@gmail.com>
+Date:   Thu May 9 14:51:42 2024 -0300
+
+    Atualizando layout
+
+[33mcommit abff14d53eecdc879bfd94bc1a6c8475971e4aae[m
+Merge: 4d72bc4 c07aca9
+Author: lucas <101607932+lucax011@users.noreply.github.com>
+Date:   Tue May 7 20:02:08 2024 -0300
+
+    Merge pull request #1 from lucax011/develop
+    
+    Develop
+
+[33mcommit c07aca98c02d99e719b67473afa23129c2ac7c0f[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Tue May 7 20:01:01 2024 -0300
+
+    Finalizando correções
+
+[33mcommit c6cac03e0a42fdb1e820436558ddf9fbec26d582[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Tue May 7 19:48:41 2024 -0300
+
+     menu na tela de login e register
+
+[33mcommit e78d87a1cc91735667cc8cc4cfb19a8dea844528[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Tue May 7 19:41:59 2024 -0300
+
+    adicionando redirecionamento e menu na tela de login e register
+
+[33mcommit 219362a7ee5a55298466e7acbebc7bdb26db00ab[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Tue May 7 19:06:56 2024 -0300
+
+    adicionando o redirect da toolbar
+
+[33mcommit 4d72bc4b7b785ebcd566003af6276a229b8aada4[m
+Author: lucas <101607932+lucax011@users.noreply.github.com>
+Date:   Tue May 7 18:40:12 2024 -0300
+
+    Create README.md
+
+[33mcommit 735cc605eac4ec8246a512fe8ddcfb458b89cae7[m
+Author: Lucas <csdg6924@gmail.com>
+Date:   Tue May 7 18:19:30 2024 -0300
+
+    Primeiro commit, desenvolvi a tela inicial, login,register

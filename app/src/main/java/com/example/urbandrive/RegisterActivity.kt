@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.urbandrive.data.User
 import com.example.urbandrive.databinding.RegisterMainBinding
-import com.example.urbandrive.ui.viewmodel.UserViewModel
+import com.example.urbandrive.ui.UserViewModel
 
 class RegisterActivity : AppCompatActivity() {
     private lateinit var binding: RegisterMainBinding

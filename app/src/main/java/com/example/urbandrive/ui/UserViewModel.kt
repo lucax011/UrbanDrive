@@ -1,4 +1,4 @@
-package com.example.urbandrive.ui.viewmodel
+package com.example.urbandrive.ui
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -6,15 +6,15 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.urbandrive.data.User
 import com.example.urbandrive.data.LoginRequest
-import com.example.urbandrive.RetrofitClient
+import com.example.urbandrive.data.RetrofitClient
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class UserViewModel : ViewModel() {
 
-    private val _userLiveData = MutableLiveData<User>()
-    val userLiveData: LiveData<User> get() = _userLiveData
+    private val _userLiveData = MutableLiveData<User?>()
+    val userLiveData: MutableLiveData<User?> get() = _userLiveData
 
     private val _errorLiveData = MutableLiveData<String>()
     val errorLiveData: LiveData<String> get() = _errorLiveData
@@ -34,12 +34,18 @@ class UserViewModel : ViewModel() {
         }
     }
 
+
     fun loginUser(loginRequest: LoginRequest) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val response: Response<User> = RetrofitClient.apiService.loginUser(loginRequest)
+                val response = RetrofitClient.apiService.loginUser(loginRequest)
                 if (response.isSuccessful) {
-                    _userLiveData.postValue(response.body())
+                    val user = response.body()
+                    if (user != null) {
+                        _userLiveData.postValue(user)
+                    } else {
+                        _errorLiveData.postValue("Invalid email or password")
+                    }
                 } else {
                     _errorLiveData.postValue("Error: ${response.message()}")
                 }
