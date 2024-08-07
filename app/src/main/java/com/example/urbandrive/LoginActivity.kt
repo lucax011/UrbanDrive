@@ -18,7 +18,6 @@ class LoginActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-
         // binding.textViewUsername.text = "Nome de usuário"
     }
 
