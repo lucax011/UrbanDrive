@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Rounded button theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:textSelectHandleLeft">@drawable/custom_text_select_handle</item>
+        <item name="android:textSelectHandleRight">@drawable/custom_text_select_handle</item>
+        <item name="android:textSelectHandle">@drawable/custom_text_select_handle</item>
+    </style>
     <style name="RoundedButton" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">10dp</item>

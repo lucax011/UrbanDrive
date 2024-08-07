@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import com.example.urbandrive.data.LoginRequest
@@ -13,7 +14,7 @@ import com.example.urbandrive.ui.UserViewModel
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: LoginMainBinding
-    private lateinit var userViewModel: UserViewModel // Certifique-se de que o ViewModel esteja inicializado corretamente
+    private val userViewModel: UserViewModel by viewModels() // Usando ViewModel para gerenciamento de dados
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

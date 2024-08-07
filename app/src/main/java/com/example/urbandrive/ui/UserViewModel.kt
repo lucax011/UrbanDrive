@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.urbandrive.data.BcryptUtil
 import com.example.urbandrive.data.User
 import com.example.urbandrive.data.LoginRequest
 import com.example.urbandrive.data.RetrofitClient
@@ -42,7 +41,7 @@ class UserViewModel : ViewModel() {
                 val response = RetrofitClient.apiService.loginUser(loginRequest)
                 if (response.isSuccessful) {
                     val user = response.body()
-                    if (user != null && BcryptUtil.checkPassword(loginRequest.password, user.password)) {
+                    if (user != null) {
                         _userLiveData.postValue(user)
                     } else {
                         _errorLiveData.postValue("Invalid email or password")
