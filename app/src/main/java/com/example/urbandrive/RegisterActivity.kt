@@ -8,7 +8,7 @@ import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
-import com.example.urbandrive.data.Argon2Util
+import com.example.urbandrive.data.BcryptUtil
 import com.example.urbandrive.data.User
 import com.example.urbandrive.databinding.RegisterMainBinding
 import com.example.urbandrive.ui.UserViewModel
@@ -32,8 +32,8 @@ class RegisterActivity : AppCompatActivity() {
             val password = binding.edtSenha.text.toString()
 
             if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
-                // Criptografia com Argon2
-                val hashedPassword = Argon2Util.hashPassword(password)
+                // Criptografia com bcrypt
+                val hashedPassword = BcryptUtil.hashPassword(password)
                 val user = User(id = 0, name = name, email = email, password = hashedPassword)
                 userViewModel.registerUser(user)
             } else {

@@ -64,7 +64,7 @@ dependencies {
     // Coroutines support without the adapter
     implementation("com.squareup.retrofit2:adapter-rxjava3:2.9.0")
 
-    implementation("de.mkammerer:argon2-jvm:2.11")
+    implementation("org.mindrot:jbcrypt:0.4")
 
 
 }
