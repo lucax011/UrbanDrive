@@ -1,8 +1,5 @@
 package com.example.urbandrive.data
 
-import com.example.urbandrive.data.LoginRequest
-import com.example.urbandrive.data.User
-
 import retrofit2.Response
 import retrofit2.Retrofit
 
