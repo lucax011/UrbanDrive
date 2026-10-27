@@ -1,34 +1,35 @@
+# Urban Drive (Kotlin)
 
-Drive Urban - Projeto Kotlin
-Este repositório contém o código-fonte do projeto Drive Urban, uma aplicação Android desenvolvida em Kotlin. Drive Urban é um serviço de aluguel de carros que oferece uma maneira conveniente e sem complicações de alugar um carro por horas, dias ou o tempo que você precisar, tudo através de um aplicativo móvel.
+Versão Android nativa do **Urban Drive**, um app de aluguel de carros por hora ou por dia, sem fila nem papelada, direto pelo celular.
 
-Pré-requisitos
-Antes de começar, verifique se você atende aos seguintes requisitos:
+Versões e serviços relacionados:
+- [api-carRental](https://github.com/lucax011/api-carRental): API em Node.js + MySQL que este app consome
+- [urbandrive_dart](https://github.com/lucax011/urbandrive_dart): versão em Flutter, com o mapa de carros próximos
 
-Android Studio instalado na sua máquina.
-Dispositivo Android ou emulador para testar o aplicativo.
-Instalação
-Para clonar este repositório e executar o aplicativo, siga estas etapas:
+## O que tem hoje
 
+- Tela de login e de cadastro integradas à API com Retrofit
+- `UserViewModel` com a lógica de autenticação
+- Tela principal
 
-git clone https://github.com/lucax011/UrbanDrive
-Abra o projeto no Android Studio e execute-o no dispositivo ou emulador.
+## Stack
 
-Screenshots
+- Kotlin, Android SDK 34 (mínimo 24)
+- Retrofit 2 + Gson + RxJava 3
+- Room (dependência configurada)
 
+## Como rodar
 
-Funcionalidades
-Aluguel de Carros: Os usuários podem alugar um carro por horas, dias ou o tempo necessário.
-Facilidade de Uso: Sem filas, sem papelada, tudo feito pelo aplicativo.
-Reserva Rápida: Reserve e abra o carro através do seu celular.
-Encontre o Carro Mais Próximo: Encontre o carro mais próximo de você e alugue na hora.
-Como Contribuir
-Faça um fork do repositório.
-Crie uma branch para sua feature (git checkout -b feature/MinhaFeature).
-Faça commit das suas mudanças (git commit -am 'Adiciona MinhaFeature').
-Faça push para a branch (git push origin feature/MinhaFeature).
-Abra um Pull Request.
-Autor
-Seu Nome
-Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE.md para detalhes.
+Pré-requisitos: Android Studio e a [api-carRental](https://github.com/lucax011/api-carRental) rodando na porta 3000.
+
+1. Abra a pasta do projeto no Android Studio e aguarde o Gradle sincronizar.
+2. Rode em um emulador. O app acessa a API em `http://10.0.2.2:3000/` (`data/ApiService.kt`).
+
+## Estrutura
+
+```
+app/src/main/java/com/example/urbandrive/
+  LoginActivity.kt, RegisterActivity.kt, MainActivity.kt
+  data/   ApiService (Retrofit), LoginRequest, User
+  ui/     UserViewModel
+```
